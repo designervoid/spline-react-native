@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "spline-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/splinetool/spline-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e9c0364104a98973439c2cd4ca1e2ec4c846ed93"
+      }
+    }
+  ],
+  "version" : 2
+}
