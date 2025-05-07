@@ -1,78 +1,67 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Spline for React Native (iOS Native & Cross-Platform via WebView)
 
-# Spline for React Native (iOS Only)
+Integrate [Spline](https://spline.design), a 3D scene tool — into your React Native app.  
+Native support is currently available for iOS only.  
+For cross-platform (iOS + Android), use `spline-web` with `react-native-webview`.
 
-Welcome to Spline for React Native! This guide will walk you through integrating Spline, a powerful tool for 3D scene creation, with React Native for iOS applications.
+| Platform | Android                                                                                      | iOS                                                                                          |
+|----------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| Preview  | <img src="https://github.com/user-attachments/assets/2a277960-a8c0-4453-b1da-053c729f6918" width="200"/> | <img src="https://github.com/user-attachments/assets/2d6e603b-1f33-4e08-9e8e-a910941d4df8" width="200"/> |
+
+| Platform | Native Support         | WebView Support              |
+|----------|------------------------|------------------------------|
+| iOS      | ✅ `SplnView.swift`    | ✅ `react-native-webview`    |
+| Android  | ❌ Not yet supported    | ✅ `react-native-webview`    |
 
 ## Getting Started
 
-Before you begin, ensure you have React Native environment set up. If you haven't done so, follow the instructions up to "Creating a new application" on the React Native Environment Setup.
+Make sure your React Native environment is set up. If not, follow the [official guide](https://reactnative.dev/docs/environment-setup).
 
-## Prerequisites
-
-Xcode installed on a Mac (for iOS development).
-An initialized React Native project.
-
-## Step 1: Install dependencies
+### 1. Install Dependencies
 
 ```bash
-npm install # Using npm
-# OR
-yarn install # Using Yarn
+npm install
+# or
+yarn install
 ```
 
-## Step 2: Run Your Application
+### 2. Run the App
 
-Start Metro Bundler
-First, start Metro, the JavaScript bundler for React Native:
+Start the Metro bundler:
 
 ```bash
-npm start # Using npm
-# OR
-yarn start # Using Yarn
+npm start
+# or
+yarn start
 ```
 
-## Start iOS App
-In a new terminal window, launch your iOS app:
+Launch the iOS app:
 
 ```bash
-npm run ios # Using npm
-# OR
-yarn ios # Using Yarn
+npm run ios
+# or
+yarn ios
 ```
 
-The iOS Simulator should open with your app running.
+## Native iOS Setup with SplnView
 
-## Step 3: Using SplnView
+To use native Spline integration on iOS:
 
-SplnView is your gateway to incorporating Spline into React Native. Here's how to use it:
+1. Add `SplnView.swift` to your Xcode project.
+2. Make sure it's included in your build target.
+3. Add a bridging header if needed (for Swift + Objective-C).
 
-Add `SplnView.swift` to Your iOS Project:
+### Customization
 
-Include the `SplnView.swift` file in your Xcode project.
-Ensure it's targeted to your React Native project.
-Use a bridging header if needed for Swift and Objective-C integration.
+You can extend or modify `SplnView.swift` as needed — update properties, methods, or embed additional functionality.
 
-### Customizing SplnView
-Modify `SplnView.swift` to suit your needs:
+## Troubleshooting
 
-Open `SplnView.swift` in Xcode.
-Adjust its properties, methods, or add new functionalities.
-Troubleshooting
+- Ensure Xcode is properly configured for Swift and React Native.
+- Verify the Spline runtime and your scene URL.
+- Check your WebView permissions and links if using the cross-platform approach.
 
-If you encounter issues:
+## Resources
 
-1. Check your `Xcode` project setup for `Swift` and `React Native`.
-2. Ensure Spline Runtime is installed and configured correctly.
-3. Confirm the Spline scene URL is valid.
-
-## Additional Resources
-
-[Spline Documentation](https://docs.spline.design/native-3d-embeds-for-ios) - Learn more about Spline.
-
-[React Native Documentation](https://reactnative.dev/docs/getting-started) - Deep dive into React Native.
-
-## P.S
-
-This guide provides a basic framework for integrating Spline with React Native in iOS. 
-For advanced use cases, explore detailed Spline documentation and React Native's extensive resources.
+- [Spline Docs](https://docs.spline.design/native-3d-embeds-for-ios)
+- [React Native Docs](https://reactnative.dev/docs/getting-started)
