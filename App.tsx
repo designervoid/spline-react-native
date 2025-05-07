@@ -1,24 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import {
   SafeAreaView,
 } from 'react-native';
 
-import {
-  requireNativeComponent
-} from 'react-native'
-const SplnView = requireNativeComponent("SplnView")
+import SplineView from './SplineView';
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView>
-      <SplnView />
+    <SafeAreaView style={{ flex: 1 }}>
+      <SplineView variant="webview" style={{ flex: 1 }} />
     </SafeAreaView>
   );
 }

@@ -1,6 +1,6 @@
 {
-  "name": "Spline",
-  "version": "0.0.1",
+  "name": "spline-react-native",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "^0.73.11"
+    "react-native": "^0.73.11",
+    "react-native-webview": "^13.13.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

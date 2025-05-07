@@ -12,4 +12,8 @@ class SplnViewManager: RCTViewManager {
   override func view() -> UIView! {
       return SplnView()
     }
+
+  @objc static override func requiresMainQueueSetup() -> Bool {
+    return true
+  }
 }
